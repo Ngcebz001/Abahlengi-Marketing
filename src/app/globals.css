@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-forest: #2e5c4f;
+  --brand-sage: #9dbfa5;
+  --brand-beige: #f7f3e9;
+  --brand-clay: #c79c73;
+  --brand-white: #ffffff;
+
+  --bg: var(--brand-beige);
+  --fg: #1e2c28;
+  --muted: #607d73;
+  --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand-sage) 55%, transparent);
+
+  --font-heading: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #1c2a26;
+  --fg: #f4f6f4;
+  --muted: #c7d5cf;
+  --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand-sage) 40%, transparent);
+  color-scheme: dark;
+}
+
+* {
+  @apply border-transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[var(--bg)] text-[var(--fg)] font-body antialiased;
+}
+
+a {
+  @apply text-forest underline-offset-4 transition-colors duration-200;
+}
+
+a:hover,
+a:focus-visible {
+  @apply text-clay;
+}
+
+button,
+[role='button'] {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sage focus-visible:ring-offset-[var(--bg)];
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-[var(--fg)] tracking-tight;
+  }
+
+  p {
+    @apply max-w-prose text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sage focus-visible:ring-offset-[var(--bg)];
+  }
+
+  .btn-primary {
+    @apply btn bg-clay text-white shadow-sm hover:bg-forest hover:shadow-md active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply btn border border-forest text-forest active:scale-95;
+    background-color: transparent;
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    background-color: color-mix(in srgb, var(--brand-sage) 20%, transparent);
+    color: var(--brand-forest);
+  }
+}
+
+.skip-to-content {
+  @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-white;
+}
+
+.section-spacing {
+  @apply py-16 md:py-24;
+}
+
+.prose-light {
+  @apply text-muted;
+}
+
+::-moz-selection {
+  background-color: color-mix(in srgb, var(--brand-sage) 40%, transparent);
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--brand-sage) 40%, transparent);
+}
