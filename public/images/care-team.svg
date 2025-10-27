@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract illustration representing caring support</title>
+  <desc id="desc">Gentle organic shapes in Abahlengi Group brand colours forming an embracing composition.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F3E9" />
+      <stop offset="100%" stop-color="#9DBFA5" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E5C4F" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1C2A26" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" rx="48" />
+  <g fill="#2E5C4F" opacity="0.1">
+    <path d="M120 120c80-80 200-80 280 0s80 200 0 280-200 80-280 0-80-200 0-280z" />
+    <path d="M520 60c68 0 124 56 124 124s-56 124-124 124-124-56-124-124 56-124 124-124z" />
+  </g>
+  <g>
+    <path fill="#2E5C4F" d="M350 340c-18-62-88-96-138-58-41 31-35 104 9 130 33 20 76 10 103-20 12 64 96 78 128 18 30-57-14-128-77-128-12 0-24 2-35 6z" />
+    <path fill="#C79C73" d="M558 184c44 0 80 36 80 80s-36 80-80 80-80-36-80-80 36-80 80-80z" />
+    <path fill="#9DBFA5" d="M602 420c60 0 108 48 108 108H494c0-60 48-108 108-108z" />
+    <path fill="url(#accent)" d="M224 428c-44 0-80 36-80 80h160c0-44-36-80-80-80z" opacity="0.85" />
+  </g>
+</svg>

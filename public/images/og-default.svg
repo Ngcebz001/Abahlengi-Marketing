@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Abahlengi Group Open Graph image</title>
+  <desc id="desc">Brand panel for Abahlengi Group with calming gradients and headline text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F3E9" />
+      <stop offset="100%" stop-color="#9DBFA5" />
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E5C4F" />
+      <stop offset="100%" stop-color="#1C2A26" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="48" />
+  <path d="M0 450C180 540 420 580 600 520s420-120 600-40v150H0z" fill="#C79C73" opacity="0.35" />
+  <path d="M-20 520c200 100 420 140 640 40s420-140 600-40v110H-20z" fill="url(#ribbon)" opacity="0.85" />
+  <g transform="translate(120 180)" fill="#1E2C28">
+    <text font-family="'Poppins', 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="600" letter-spacing="0.02em">
+      Abahlengi Group
+    </text>
+    <text font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="32" y="96" opacity="0.9">
+      Compassionate care in the comfort of your home
+    </text>
+  </g>
+  <text x="120" y="460" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#F7F3E9" opacity="0.9">
+    Palliative care • At-home carers • Nationwide support
+  </text>
+</svg>
