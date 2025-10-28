@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 import { Container } from "@/components/Container";
 import { Seo } from "@/components/Seo";
+import { FaqSection } from "@/components/FaqSection";
 import { createMetadata, faqJsonLd } from "@/lib/seo";
 
 const services = [
@@ -114,8 +115,8 @@ export default function ServicesPage() {
       <Seo jsonLd={[faqJsonLd(faqs)]} />
       <section className="section-spacing">
         <Container className="space-y-6">
-          <h1 className="text-4xl font-semibold text-forest">Services</h1>
-          <p className="text-muted">
+          <h1 className="text-4xl font-semibold text-forest dark:text-sage-dark">Services</h1>
+          <p className="text-muted dark:text-slate-300">
             Our interdisciplinary team creates calm, confident care environments. Choose a service below or combine offerings to match your requirements.
           </p>
         </Container>
@@ -125,14 +126,14 @@ export default function ServicesPage() {
           <article
             key={service.id}
             id={service.id}
-            className="rounded-3xl border border-sage/30 bg-white/70 p-8 shadow-sm backdrop-blur transition hover:shadow-md dark:bg-forest/40"
+            className="rounded-3xl border border-sage/30 bg-white/70 p-8 shadow-sm backdrop-blur transition hover:shadow-md dark:bg-slate-900/95 dark:border-slate-700/50"
           >
-            <h2 className="text-2xl font-semibold text-forest">{service.title}</h2>
-            <p className="mt-3 text-muted">{service.description}</p>
-            <ul className="mt-5 space-y-2 text-sm text-forest">
+            <h2 className="text-2xl font-semibold text-forest dark:text-sage-dark">{service.title}</h2>
+            <p className="mt-3 text-muted dark:text-slate-300">{service.description}</p>
+            <ul className="mt-5 space-y-2 text-sm text-forest dark:text-slate-300">
               {service.bullets.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-forest" aria-hidden />
+                  <span className="mt-1 h-2 w-2 rounded-full bg-forest dark:bg-sage-dark" aria-hidden />
                   <span>{item}</span>
                 </li>
               ))}
@@ -145,34 +146,7 @@ export default function ServicesPage() {
           </article>
         ))}
       </Container>
-      <section className="section-spacing bg-white/60 dark:bg-forest/20">
-        <Container>
-          <h2 className="text-3xl font-semibold text-forest">Frequently asked questions</h2>
-          <div className="mt-8 divide-y divide-sage/30 rounded-2xl border border-sage/30 bg-white/80 shadow-sm dark:bg-forest/40">
-            {faqs.map((faq, index) => (
-              <FaqItem key={faq.question} defaultOpen={index === 0} {...faq} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      <FaqSection faqs={faqs} />
     </>
-  );
-}
-
-type FaqItemProps = {
-  question: string;
-  answer: string;
-  defaultOpen?: boolean;
-};
-
-function FaqItem({ question, answer, defaultOpen }: FaqItemProps) {
-  return (
-    <details className="group" {...(defaultOpen ? { open: true } : {})}>
-      <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-forest">
-        {question}
-        <span className="text-sm text-muted group-open:rotate-45 transition-transform">+</span>
-      </summary>
-      <div className="px-6 pb-5 text-sm text-muted">{answer}</div>
-    </details>
   );
 }

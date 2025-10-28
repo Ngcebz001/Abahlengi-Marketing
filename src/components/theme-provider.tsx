@@ -13,7 +13,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       attribute="data-theme"
       defaultTheme="system"
       enableSystem
-      disableTransitionOnChange
     >
       {children}
     </NextThemesProvider>

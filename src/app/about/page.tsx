@@ -39,15 +39,15 @@ export default function AboutPage() {
       <section className="section-spacing">
         <Container className="grid gap-12 md:grid-cols-[1.1fr,0.9fr] md:items-center">
           <div className="space-y-6">
-            <h1 className="text-4xl font-semibold text-forest">About Abahlengi Group</h1>
-            <p className="text-muted">
+            <h1 className="text-4xl font-semibold text-forest dark:text-sage-dark">About Abahlengi Group</h1>
+            <p className="text-muted dark:text-slate-300">
               Founded by healthcare professionals and family caregivers, Abahlengi Group ensures South Africans can access dignified care without leaving home. We believe healing happens best in familiar surroundings, surrounded by loved ones.
             </p>
-            <p className="text-muted">
+            <p className="text-muted dark:text-slate-300">
               Our multidisciplinary team spans registered nurses, case managers, physiotherapists and dedicated carers who are trained, supervised and supported to deliver exceptional service.
             </p>
           </div>
-          <div className="relative overflow-hidden rounded-3xl bg-sage/30 p-1 shadow-subtle">
+          <div className="relative overflow-hidden rounded-3xl bg-sage/30 dark:bg-sage-dark/20 p-1 shadow-subtle">
             <Image
               src="/images/care-team.svg"
               alt="Abstract illustration conveying Abahlengi carers supporting a patient at home"
@@ -58,14 +58,14 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-      <section className="section-spacing bg-white/70 dark:bg-forest/30">
+      <section className="section-spacing bg-beige/50 dark:bg-slate-950/30">
         <Container>
-          <h2 className="text-3xl font-semibold text-forest">Our values</h2>
+          <h2 className="text-3xl font-semibold text-forest dark:text-sage-dark">Our values</h2>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             {values.map((value) => (
-              <div key={value.title} className="rounded-3xl border border-sage/30 bg-white/80 p-6 shadow-sm dark:bg-forest/40">
-                <h3 className="text-xl font-semibold text-forest">{value.title}</h3>
-                <p className="mt-3 text-sm text-muted">{value.description}</p>
+              <div key={value.title} className="rounded-3xl border border-sage/30 dark:border-sage-dark/20 bg-white dark:bg-slate-900/50 p-6 shadow-sm">
+                <h3 className="text-xl font-semibold text-forest dark:text-sage-dark">{value.title}</h3>
+                <p className="mt-3 text-sm text-muted dark:text-slate-300">{value.description}</p>
               </div>
             ))}
           </div>
@@ -74,14 +74,14 @@ export default function AboutPage() {
       <section className="section-spacing">
         <Container className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-forest">Serving families nationwide</h2>
-            <p className="text-muted">
+            <h2 className="text-3xl font-semibold text-forest dark:text-sage-dark">Serving families nationwide</h2>
+            <p className="text-muted dark:text-slate-300">
               From Cape Town to Polokwane, we coordinate live-in and visiting carers who bring warmth, expertise and calm into every home. With 24/7 care management, you can always reach a member of our team.
             </p>
           </div>
-          <div className="rounded-3xl bg-forest p-8 text-white shadow-subtle">
-            <h3 className="text-xl font-semibold">What to expect</h3>
-            <ul className="mt-4 space-y-3 text-sm text-white/80">
+          <div className="rounded-3xl bg-forest dark:bg-forest-dark p-8 text-white shadow-subtle">
+            <h3 className="text-xl font-semibold text-white dark:text-slate-900">What to expect</h3>
+            <ul className="mt-4 space-y-3 text-sm text-white/90 dark:text-slate-900/80">
               <li>Dedicated care manager with regular check-ins</li>
               <li>Care plans reviewed and updated in partnership with your clinicians</li>
               <li>Comprehensive handovers and daily updates for families</li>

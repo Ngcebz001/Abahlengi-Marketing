@@ -21,9 +21,12 @@
 }
 
 [data-theme='dark'] {
-  --bg: #1c2a26;
-  --fg: #f4f6f4;
-  --muted: #c7d5cf;
+  --bg: #1a1f1e;
+  --fg: #e8ebe9;
+  --muted: #9ca3a0;
+  --brand-forest-dark: #7fb89d;
+  --brand-clay-dark: #d9b088;
+  --brand-sage-dark: #a8c9b0;
   --focus-ring: 0 0 0 3px color-mix(in srgb, var(--brand-sage) 40%, transparent);
   color-scheme: dark;
 }
@@ -40,13 +43,44 @@ body {
   @apply bg-[var(--bg)] text-[var(--fg)] font-body antialiased;
 }
 
-a {
+/* Smooth transitions for theme changes */
+html,
+body,
+section,
+div,
+header,
+footer,
+nav,
+article,
+aside {
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+  transition: color 300ms ease-in-out;
+}
+
+svg {
+  transition: fill 300ms ease-in-out, stroke 300ms ease-in-out;
+}
+
+/* Scope link styles to main content, exclude footer and header */
+main a {
   @apply text-forest underline-offset-4 transition-colors duration-200;
 }
 
-a:hover,
-a:focus-visible {
+[data-theme='dark'] main a {
+  @apply text-forest-dark;
+}
+
+main a:hover,
+main a:focus-visible {
   @apply text-clay;
+}
+
+[data-theme='dark'] main a:hover,
+[data-theme='dark'] main a:focus-visible {
+  @apply text-clay-dark;
 }
 
 button,
@@ -83,15 +117,29 @@ button,
     @apply btn bg-clay text-white shadow-sm hover:bg-forest hover:shadow-md active:scale-95;
   }
 
+  [data-theme='dark'] .btn-primary {
+    @apply bg-sage-dark text-slate-900 hover:bg-forest-dark hover:text-white shadow-lg;
+  }
+
   .btn-secondary {
     @apply btn border border-forest text-forest active:scale-95;
     background-color: transparent;
+  }
+
+  [data-theme='dark'] .btn-secondary {
+    @apply border-sage-dark text-sage-dark;
   }
 
   .btn-secondary:hover,
   .btn-secondary:focus-visible {
     background-color: color-mix(in srgb, var(--brand-sage) 20%, transparent);
     color: var(--brand-forest);
+  }
+
+  [data-theme='dark'] .btn-secondary:hover,
+  [data-theme='dark'] .btn-secondary:focus-visible {
+    background-color: color-mix(in srgb, var(--brand-sage-dark) 20%, transparent);
+    color: var(--brand-sage-dark);
   }
 }
 

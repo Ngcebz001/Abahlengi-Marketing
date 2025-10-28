@@ -68,7 +68,7 @@ export function ServicesTeaser() {
       <Container>
         <div className="mb-10 flex flex-col gap-4 text-center">
           <h2 className="text-3xl font-semibold sm:text-4xl">Support tailored to each family</h2>
-          <p className="mx-auto text-muted">
+          <p className="mx-auto text-muted dark:text-slate-300">
             Every plan is built around the person we are caring for — with ongoing coordination between our nurses, carers and your medical team.
           </p>
         </div>
@@ -83,16 +83,16 @@ export function ServicesTeaser() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={index}
-                className="group relative overflow-hidden rounded-2xl border border-sage/30 bg-white/80 p-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg dark:bg-forest/40"
+                className="group relative overflow-hidden rounded-2xl border border-sage/30 bg-white/80 p-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg dark:bg-slate-900/95 dark:border-slate-700/50"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sage/40 text-forest">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sage/40 text-forest dark:bg-sage-dark/30 dark:text-sage-dark">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-forest">{service.title}</h3>
-                <p className="mt-3 text-sm text-muted">{service.description}</p>
+                <h3 className="mt-6 text-xl font-semibold text-forest dark:text-sage-dark">{service.title}</h3>
+                <p className="mt-3 text-sm text-muted dark:text-slate-300">{service.description}</p>
                 <Link
                   href={service.href}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-forest transition group-hover:text-clay"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-forest transition group-hover:text-clay dark:text-sage-dark dark:group-hover:text-clay-dark"
                 >
                   Learn more
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

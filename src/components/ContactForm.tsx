@@ -56,13 +56,13 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-6">
       {actionState?.error ? (
-        <p role="alert" className="rounded-lg bg-clay/10 px-4 py-3 text-sm text-clay">
+        <p role="alert" className="rounded-lg bg-clay/10 px-4 py-3 text-sm text-clay dark:bg-clay-dark/20 dark:text-clay-dark">
           {actionState.error}
         </p>
       ) : null}
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="fullName" className="text-sm font-medium text-forest">
+          <label htmlFor="fullName" className="text-sm font-medium text-forest dark:text-forest-dark">
             Full name
           </label>
           <input
@@ -70,12 +70,12 @@ export function ContactForm() {
             type="text"
             autoComplete="name"
             {...form.register("fullName")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           />
           <FieldError message={form.formState.errors.fullName?.message} />
         </div>
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium text-forest">
+          <label htmlFor="email" className="text-sm font-medium text-forest dark:text-forest-dark">
             Email address
           </label>
           <input
@@ -83,12 +83,12 @@ export function ContactForm() {
             type="email"
             autoComplete="email"
             {...form.register("email")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           />
           <FieldError message={form.formState.errors.email?.message} />
         </div>
         <div className="space-y-2">
-          <label htmlFor="phone" className="text-sm font-medium text-forest">
+          <label htmlFor="phone" className="text-sm font-medium text-forest dark:text-forest-dark">
             Phone number
           </label>
           <input
@@ -98,13 +98,13 @@ export function ContactForm() {
             autoComplete="tel"
             placeholder="e.g. +27 87 123 4567"
             {...form.register("phone")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           />
-          <p className="text-xs text-muted">We’ll use this to confirm details and care preferences.</p>
+          <p className="text-xs text-muted dark:text-slate-400">We'll use this to confirm details and care preferences.</p>
           <FieldError message={form.formState.errors.phone?.message} />
         </div>
         <div className="space-y-2">
-          <label htmlFor="city" className="text-sm font-medium text-forest">
+          <label htmlFor="city" className="text-sm font-medium text-forest dark:text-forest-dark">
             City / Area
           </label>
           <input
@@ -112,18 +112,18 @@ export function ContactForm() {
             type="text"
             autoComplete="address-level2"
             {...form.register("city")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           />
           <FieldError message={form.formState.errors.city?.message} />
         </div>
         <div className="space-y-2 md:col-span-2">
-          <label htmlFor="careType" className="text-sm font-medium text-forest">
+          <label htmlFor="careType" className="text-sm font-medium text-forest dark:text-forest-dark">
             Care type
           </label>
           <select
             id="careType"
             {...form.register("careType")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           >
             {careTypes.map((option) => (
               <option key={option.value} value={option.value}>
@@ -134,19 +134,19 @@ export function ContactForm() {
           <FieldError message={form.formState.errors.careType?.message} />
         </div>
         <div className="space-y-2 md:col-span-2">
-          <label htmlFor="message" className="text-sm font-medium text-forest">
+          <label htmlFor="message" className="text-sm font-medium text-forest dark:text-forest-dark">
             How can we help?
           </label>
           <textarea
             id="message"
             rows={5}
             {...form.register("message")}
-            className="w-full rounded-lg border border-sage/40 bg-white/80 px-4 py-3 text-sm text-forest shadow-sm transition focus:border-forest focus:ring-2 focus:ring-sage dark:bg-forest/40"
+            className="w-full rounded-lg border-2 border-forest/50 bg-sage/15 px-4 py-3 text-sm text-forest shadow-md transition focus:border-forest focus:bg-white focus:ring-2 focus:ring-forest/30 dark:bg-slate-800 dark:border-sage/30 dark:text-forest-dark dark:focus:border-forest-dark"
           />
           <FieldError message={form.formState.errors.message?.message} />
         </div>
       </div>
-      <label className="flex items-start gap-3 rounded-xl border border-sage/30 bg-white/60 p-4 text-sm text-muted dark:bg-forest/30">
+      <label className="flex items-start gap-3 rounded-xl border border-sage/30 bg-white/60 p-4 text-sm text-muted dark:text-slate-300 dark:bg-slate-800/70 dark:border-sage/20">
         <input
           type="checkbox"
           {...form.register("consent")}
@@ -172,7 +172,7 @@ export function ContactForm() {
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p role="alert" className="text-xs text-clay">
+    <p role="alert" className="text-xs text-clay dark:text-clay-dark">
       {message}
     </p>
   );

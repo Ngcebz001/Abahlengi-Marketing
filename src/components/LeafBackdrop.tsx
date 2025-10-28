@@ -48,7 +48,7 @@ export function LeafBackdrop({ className }: LeafBackdropProps) {
       <motion.svg
         aria-hidden
         style={{ translateY, opacity: 0.08 }}
-        className="absolute -bottom-32 left-[-10%] h-[520px] w-[520px] text-sage/60"
+        className="absolute bottom-0 left-[-10%] h-[520px] w-[520px] text-sage/60"
         viewBox="0 0 400 400"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

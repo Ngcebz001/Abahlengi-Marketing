@@ -2,13 +2,17 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
         forest: "var(--brand-forest)",
+        "forest-dark": "var(--brand-forest-dark, var(--brand-forest))",
         sage: "var(--brand-sage)",
+        "sage-dark": "var(--brand-sage-dark, var(--brand-sage))",
         beige: "var(--brand-beige)",
         clay: "var(--brand-clay)",
+        "clay-dark": "var(--brand-clay-dark, var(--brand-clay))",
         ink: "var(--fg)",
         muted: "var(--muted)",
         background: "var(--bg)",

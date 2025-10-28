@@ -64,7 +64,9 @@ export function Header() {
                   href={item.href}
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    isActive ? "text-forest" : "text-muted hover:text-forest",
+                    isActive 
+                      ? "text-forest dark:text-forest-dark" 
+                      : "text-muted hover:text-forest dark:hover:text-forest-dark",
                   )}
                 >
                   {item.label}
@@ -76,7 +78,7 @@ export function Header() {
           <div className="flex items-center gap-2 md:hidden">
             <a
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/60 text-forest hover:border-forest/80 hover:text-forest"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/60 text-forest hover:border-forest/80 hover:text-forest dark:text-forest-dark dark:border-sage/40 dark:hover:border-forest-dark/80 dark:hover:text-forest-dark"
               aria-label="Call Abahlengi"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
@@ -86,7 +88,7 @@ export function Header() {
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((prev) => !prev)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/60 text-forest hover:border-forest/80 hover:text-forest"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/60 text-forest hover:border-forest/80 hover:text-forest dark:text-forest-dark dark:border-sage/40 dark:hover:border-forest-dark/80 dark:hover:text-forest-dark"
             >
               <span className="sr-only">Toggle navigation</span>
               {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
@@ -114,7 +116,9 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       "text-base font-medium",
-                      isActive ? "text-forest" : "text-muted hover:text-forest",
+                      isActive 
+                        ? "text-forest dark:text-forest-dark" 
+                        : "text-muted hover:text-forest dark:hover:text-forest-dark",
                     )}
                   >
                     {item.label}
