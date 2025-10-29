@@ -43,8 +43,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full backdrop-blur",
-        scrolled ? "bg-[color-mix(in_srgb,var(--bg)_80%,transparent)] shadow-md" : "bg-[color-mix(in_srgb,var(--bg)_95%,transparent)]",
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        scrolled ? "backdrop-blur-md bg-beige/85 dark:bg-background/85 shadow-md" : "bg-transparent",
       )}
     >
       <Container>
@@ -54,7 +54,9 @@ export function Header() {
             scrolled ? "h-16 md:h-20" : "h-20 md:h-24",
           )}
         >
-          <Logo />
+          <div className="flex-shrink-0 min-w-0">
+            <Logo />
+          </div>
           <div className="hidden items-center gap-8 md:flex">
             {navigation.map((item) => {
               const isActive = pathname === item.href;

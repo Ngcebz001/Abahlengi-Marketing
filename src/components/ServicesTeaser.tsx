@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, HeartPulse, Home, MoonStar, Pill, Stethoscope, UsersRound, type LucideIcon } from "lucide-react";
+import { ArrowRight, HeartPulse, Home, Stethoscope, type LucideIcon } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
 
@@ -28,28 +28,10 @@ const services = [
     icon: Stethoscope,
   },
   {
-    title: "Short-Term Respite",
-    description: "Trusted carers who step in while family caregivers take a much-needed break.",
-    href: "/services#short-term-respite" as Route,
-    icon: UsersRound,
-  },
-  {
     title: "Companionship & Daily Living",
     description: "Warm assistance with meals, routines, light housekeeping and friendly company.",
     href: "/services#companionship" as Route,
     icon: Home,
-  },
-  {
-    title: "Medication Reminders",
-    description: "Gentle support with schedules, prescriptions and doctor communication.",
-    href: "/services#medication-reminders" as Route,
-    icon: Pill,
-  },
-  {
-    title: "Overnight Care",
-    description: "Restful nights knowing a trained professional is present and alert.",
-    href: "/services#overnight-care" as Route,
-    icon: MoonStar,
   },
 ] satisfies Service[];
 
@@ -100,6 +82,12 @@ export function ServicesTeaser() {
               </motion.div>
             );
           })}
+        </div>
+        <div className="mt-12 text-center">
+          <Link href="/services" className="btn-secondary inline-flex items-center gap-2">
+            Explore all services
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
       </Container>
     </section>

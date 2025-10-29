@@ -13,8 +13,12 @@ const textVariants = {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-sage/20 via-beige to-transparent dark:from-sage/10 dark:via-background dark:to-transparent pb-24 pt-24">
-      <LeafBackdrop className="opacity-80" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-sage/20 via-beige to-transparent dark:from-sage/10 dark:via-background dark:to-transparent pb-24 pt-32 md:pt-40">
+      <div 
+        className="absolute inset-0 opacity-30 dark:opacity-20 bg-[url(/images/hero-care.png)] bg-no-repeat bg-cover bg-[position:10%_30%] md:bg-[position:center_30%]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-beige/95 via-beige/90 to-beige/70 dark:from-background/95 dark:via-background/90 dark:to-background/70" />
+      <LeafBackdrop className="opacity-60" />
       <Container className="relative z-10 flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl space-y-6">
           <motion.h1

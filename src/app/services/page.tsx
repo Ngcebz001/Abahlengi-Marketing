@@ -73,6 +73,17 @@ const services = [
       "Morning handovers with families",
     ],
   },
+  {
+    id: "infusions-phlebotomy",
+    title: "IV Infusions & Phlebotomy",
+    description:
+      "Professional administration of intravenous treatments and blood draws in the comfort of your home.",
+    bullets: [
+      "IV infusions administered by trained nurses",
+      "Home-based blood draws and sample collection",
+      "Coordination with laboratories and doctors",
+    ],
+  },
 ];
 
 const faqs = [

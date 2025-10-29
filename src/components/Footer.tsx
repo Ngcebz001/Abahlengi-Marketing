@@ -58,15 +58,8 @@ export function Footer() {
         </div>
       </Container>
       <div className="border-t border-white/20 dark:border-slate-800 py-4">
-        <Container className="flex flex-col gap-2 text-xs text-white/60 dark:text-slate-400 md:flex-row md:items-center md:justify-between">
-          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            {siteConfig.sameAs.map((link) => (
-              <a key={link} href={link} className="no-underline transition hover:text-white dark:hover:text-slate-100" target="_blank" rel="noreferrer">
-                {new URL(link).hostname.replace("www.", "")}
-              </a>
-            ))}
-          </div>
+        <Container className="flex justify-center">
+          <p className="text-xs text-white/60 dark:text-slate-400">&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
         </Container>
       </div>
     </footer>
